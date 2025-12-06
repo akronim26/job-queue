@@ -7,13 +7,13 @@ import (
 
 // The definition of a job
 type Job struct {
-	Id int
+	Id  int
 	Msg string
 }
 
 // The function to process a job
 func (j Job) Process() {
-	fmt.Println("Processing job #%d: %s", j.Id, j.Msg)
+	fmt.Printf("Processing job #%d: %s\n", j.Id, j.Msg)
 	time.Sleep(1 * time.Second) // simulating the workload
-	fmt.Println("Completed processing #%d", j.Id)
+	fmt.Printf("Completed processing #%d\n", j.Id)
 }
